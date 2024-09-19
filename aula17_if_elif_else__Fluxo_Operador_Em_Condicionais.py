@@ -10,6 +10,9 @@ ultima_Variavel = True
 
 if condicao:
     print('A condição é verdadeira.\n')
+    print('print 2')
+    print('print 3')
+    print('print 4')
 else:
     print('A condição é falsa.\n')
 
