@@ -1,2 +1,7 @@
-if 1 and 1:
-    print(True and False and 0)
+variavel = 'Olá mundo'
+
+
+print(variavel[::-2])
+
+
+print('\n')

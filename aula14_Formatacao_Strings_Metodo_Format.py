@@ -1,4 +1,13 @@
 '''
+
+Interpolação é o processo de inserir valores 
+de variáveis dentro de uma string. Em Python, 
+temos diferentes sintaxes para realizar essa tarefa,
+cada uma com suas particularidades e melhor utilizada 
+em diferentes contextos. O uso do método "format()" é 
+um outro tipo pelo qual é possível fazer a interpolação.
+
+
 Em Python, format() é um método associado a strings. 
 Ele é utilizado para formatar strings de forma concisa 
 e flexível, permitindo a inserção de valores de variáveis 

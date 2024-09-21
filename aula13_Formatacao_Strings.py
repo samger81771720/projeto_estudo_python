@@ -1,6 +1,14 @@
 
 ''' AULA DE FORMATAÇÃO DE STRINGS '''
 
+''' Interpolação é o processo de inserir valores 
+de variáveis dentro de uma string. Em Python, 
+temos diferentes sintaxes para realizar essa tarefa,
+cada uma com suas particularidades e melhor utilizada 
+em diferentes contextos. O uso do "f-strings" é um outro tipo
+pelo qual é possível fazer a interpolação.
+'''
+
 '''
     f-strings ----> "SINTAXE ESPECIAL EM PYTHON PARA FORMATAR STRINGS"
 
