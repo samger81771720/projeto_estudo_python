@@ -1,13 +1,14 @@
 """
-Fatiamento de strings
+                                Fatiamento de strings
  
  012345678
  Olá mundo
 -987654321
 
 Fatiamento [i:f:p] [::]
-Obs.: a função len retorna a qtd 
-de caracteres da str
+
+função "len": retorna a qtd de caracteres da str
+
 """
 
 variavel = 'Olá mundo'
@@ -76,8 +77,8 @@ print(variavel[::-1])
     No exemplo acima como o início e o fim não foram 
     declarados com números, então o interpretador 
     entenderá que a iteração deverá ocorrer do início 
-    ao fim e "o passo seguirá uma ordem inversa, pois 
-    o número correspondente está negativo."
+    ao fim e o "passo" seguirá uma "ordem inversa", pois 
+    o número correspondente está "negativo".
 '''
 
 print('\n')

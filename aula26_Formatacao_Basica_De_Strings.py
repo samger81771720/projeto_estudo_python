@@ -4,8 +4,6 @@ s - string
 d - int
 f - float
 
-.<número de dígitos>f
-
 x ou X - Hexadecimal
 
 (Caractere)(><^)(quantidade)
