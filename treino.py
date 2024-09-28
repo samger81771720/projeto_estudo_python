@@ -1,7 +1,4 @@
-variavel = 'Olá mundo'
+numero = input('digite')
 
+print(numero.isdigit())
 
-print(variavel[::-2])
-
-
-print('\n')
