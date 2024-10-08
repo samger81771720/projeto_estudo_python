@@ -15,7 +15,7 @@ GRUPO 2:
 *Estática: Define tipos em tempo de compilação. Exemplo: Em Java, int x = 5 e x = 'texto' gera erro.
 
 
-Tipos de tipagem do Python= Dinâmica e Forte
+Tipos de tipagem do Python: "Dinâmica" e "Forte"
 
 """
 
