@@ -1,8 +1,4 @@
-interval = range(0, 50, 8)
+faixa = range(0,3)
 
-print('\n',interval,'\n')
-
-for value in interval:
-    print(value)
-
-print('\n')
+for iterator in faixa:
+    print(iterator)
