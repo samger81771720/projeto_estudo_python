@@ -1,31 +1,3 @@
-"""
-        "Faça um jogo para o usuário adivinhar qual a palavra secreta"
-
-- Você vai propor uma palavra secreta
-qualquer e vai dar a possibilidade para
-o usuário digitar apenas uma letra.
-
-
-- Quando o usuário digitar uma letra, você 
-vai conferir se a letra digitada está
-na palavra secreta.
-
-
-- Se a letra digitada estiver na
-palavra secreta; exiba a letra;
-
-
-- Se a letra digitada não estiver
-na palavra secreta; exiba *.
-
-
-Faça a contagem de tentativas do seu
-usuário.
-
-
-"""
-
-
 # Importando o módulo do python "os"
 import os
 
@@ -64,8 +36,8 @@ while True:
 
     if palavra_mascarada == palavra_secreta:
         
-        # Implementando o módulo "os" para limpar o terminal
-        # nesse ponto do código
+        # Implementando o módulo "os" para limpar o 
+        # terminal nesse ponto de execução do código
         os.system('cls')
 
         erros = (contagem_de_tentativas - tamanho_da_palavra)
@@ -74,8 +46,3 @@ while True:
                '\n\n"Fim do Programa"\n')
         break
  
-
-   
-
-  
-        
