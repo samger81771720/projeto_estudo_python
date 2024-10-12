@@ -45,9 +45,7 @@ formatada final.
 
 '''
 
-
-
-                # EXEMPLOS PRÁTICOS
+# EXEMPLOS PRÁTICOS
 
 a = 'A'
 b = 'B'
@@ -94,8 +92,8 @@ formato3 = string3.format(a, b, numero)
 '''
 Procurando agora de acordo com o nome do parâmetro nomeado:
 '''
-string4 = '\n Por parâmetro nomeado: Letra b = {letraB}, numero = {numeroNomeado:.2f} e a Letra a = {letraA}'
 
+string4 = '\n Por parâmetro nomeado: Letra b = {letraB}, numero = {numeroNomeado:.2f} e a Letra a = {letraA}'
 
 ''' 
     Já nesse outro exemplo, os mesmos argumentos "a", 
@@ -104,10 +102,6 @@ string4 = '\n Por parâmetro nomeado: Letra b = {letraB}, numero = {numeroNomead
 '''
 
 formato4 =  string4.format(letraA = a, letraB = b, numeroNomeado = numero)
-
-
-
-
 
 '''
 Também é possível nomear apenas uma parte dos argumentos, 

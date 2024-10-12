@@ -19,6 +19,7 @@ Tipos de tipagem do Python: "Dinâmica" e "Forte"
 
 """
 
+# STRING É UM TIPO "IMUTÁVEL"
 
 #imprimindo "números" e não "strings"
 print(1234)
