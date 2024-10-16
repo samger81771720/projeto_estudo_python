@@ -1,6 +1,10 @@
-import dis
+_, numero2, _, *_ = [254, 2.99666, 'b']
 
-def hello_world():
-    print("Olá mundo")
 
-dis.dis(hello_world)
+print(numero2)
+
+print(_)
+
+
+
+

@@ -12,3 +12,9 @@ nova_palavra = ''
 for letra in palavra:
     nova_palavra += f'*{letra}'
     print(nova_palavra)
+
+
+# É possível iterar letras de uma string, pois 
+# uma string é acessável por meio dos seus índices:
+for letra in 'abc':
+    print(letra)
