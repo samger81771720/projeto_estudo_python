@@ -1,10 +1,8 @@
-_, numero2, _, *_ = [254, 2.99666, 'b']
+lista = ['A', 'B', 'C']
 
+_, _, i, *_ = ('A', 'B', 'C', 'D')
 
-print(numero2)
-
-print(_)
-
+print(i, _)
 
 
 

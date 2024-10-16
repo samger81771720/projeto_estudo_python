@@ -1,5 +1,8 @@
-'''INTRODUÇÃO AO DESEMPACOTAMENTO'''
+'''
+    "INTRODUÇÃO AO DESEMPACOTAMENTO"
 
+    --->  Desempacotando listas []
+'''
 
 lista_estados = ['Rio de Janeiro','Santa Catarina','São Paulo']
 
@@ -10,7 +13,7 @@ estado1, estado2, estado3 = lista_estados
 # Observe que para cada índice 
 # foi criada uma respctiva variável
 # a qual armazenou de acordo com a 
-# ordem de cada índice presente na lista
+# ordem de cada índice presente na lista "[]"
 print(estado1)
 print(estado2)
 print(estado3)
