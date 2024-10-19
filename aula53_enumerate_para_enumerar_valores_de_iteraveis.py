@@ -5,7 +5,7 @@
 
 Iterável (iterable): é um objeto que pode ser percorrido 
 por um loop, como listas, tuplas ou strings. Ele possui o 
-método __iter__(), que retorna um iterator.
+método __iter__(), que retorna um iterador(iterator).
 
 Iterador (iterator): é o objeto que faz a iteração de fato, 
 retornado por __iter__(). Ele possui o método __next__() 
@@ -18,7 +18,7 @@ A função "enumerate" tem uma relação direta com iteráveis
 e iteradores. Ela atua da seguinte maneira:
 
  
-Iterável (iterable): A função enumerate internamente chama 
+A função enumerate internamente chama 
 o método iter() no iterável que você passa como argumento, 
 gerando um iterador. 
 Depois disso, enumerate cria seu próprio iterador que, a cada 
@@ -27,9 +27,7 @@ valor do elemento, utilizando o iterador original do iterável
 para percorrer os itens, associando um índice a cada 
 elemento do iterável.
 
-Iterador (iterator): Agora, nesse caso, quem retorna o objeto
-iterador é a função "enumerate" e não o iterável (iterable). 
-Com isso o iterador percorre elemento por elemento usando 
+Com isso o iterador percorre índice por índice usando 
 a função next() ou com um loop for. A cada iteração, 
 o iterador retornado por enumerate fornece uma tupla 
 contendo o índice e o valor do elemento."
@@ -37,18 +35,26 @@ contendo o índice e o valor do elemento."
 --------------------------------------------------------------------------
 Obs.: "Quem avança para o próximo item é a função next(). 
 
-No entanto, ela faz isso no iterador. O iterador é 
-responsável por manter o estado da iteração, então 
-cada vez que você chama "next()"(ou o a cada loop de um for),
-o iterador avança para o próximo item do iterável, ou seja, 
-next() vai "pedindo" o próximo item ao iterador,
-que por sua vez avança na lista.
+o método next() é chamado explicitamente por você ou pelo loop for. 
+O iterador em si não "invoca o método next()" automaticamente. 
 
-Cada vez que você chama o método next() sobre o iterador, ele:
-- Acessa o item atual do iterável.
-- Retorna esse item.
-- Avança internamente para o próximo item, para que, na próxima 
-chamada de next(), ele saiba qual item retornar.
+Abaixo está a sequência de como funciona por trás dos panos:
+
+1 - Quando você usa o método iter() em um iterável (como uma lista), 
+ela cria um iterador.
+
+2 - O iterador mantém o estado atual da iteração e sabe em qual posição está.
+
+3 - Cada vez que você chama o método next() sobre o iterador, ele:
+
+* Acessa o item atual do iterável.
+* Retorna esse item.
+* Após isso o iterator aguarda a próxima chamada de next(), 
+para acessar o próximo item.
+
+4 - No caso da função enumerate, o iterador adicionalmente gera o índice 
+junto com o valor.
+
 ---------------------------------------------------------------------------
 
 '''
@@ -57,11 +63,6 @@ chamada de next(), ele saiba qual item retornar.
 lista = ['A', 'B', 'C']
 
 
-# Usando enumerate para criar um iterador
-# Nesse momento o que acontece é que iterador
-# se torna um objeto que sabe como gerar esses valores, 
-# mas eles só serão produzidos quando você solicitar 
-# (usando next() ou um loop for).
 iterador = enumerate(lista)
 
 
@@ -89,7 +90,7 @@ for indice_e_valor in iterador:
 # Observe que em nenhuma das duas estruturas for acima nenhum 
 # valor é obtido do iterator "iterador". Tal fato 
 # ocorre porque o "interator" por ter sido atribuido anteriormente
-# para a variável "iterador" foi completamente consumido nas chamadas 
+# para a variável "iterador" foi completamente consumida nas chamadas 
 # da função next() percorrendo todos os elementos da função "enumerate".
 
 
@@ -112,27 +113,25 @@ print('\nTupla: ', tuple(enumerate(lista)))
 
 
 
-
 # " Desempacotamento das tuplas com a função enumerate."
 # No exemplo abaixo são gerados dois índices para cada
 # tupla gerada pelo iterator, "um carregando o número 
 # do índice da lista e outro carregando o valor desse 
 # respectivo índice:
-
-# REVISAR DAQUI PRA BAIXO:
 print('\nDesempacotamento com enumerate: ')
 for valores_da_tupla_gerada in enumerate(lista):
-    indice_da_tupla, valor_do_indice_da_lista = valores_da_tupla_gerada
-    print(indice_da_tupla, valor_do_indice_da_lista)
+    indice_da_lista, valor_do_indice_da_lista = valores_da_tupla_gerada
+    print(indice_da_lista, valor_do_indice_da_lista)
+
 
 # Os desenvolvedores Python simplificaram o processo, podendo ser
 # feito da forma abaixo, onde a declaração de desempacotamento é feita
 # diretamente sobrescrevendo a declaração do iterator, ou seja, ao 
 # invés de declarar o iterator é declarada(s) a(s) variável(s) de
-# desempacotamento onde fica subentendido para o interpretador que
-# no mesmo momento em que o mesmo iterar sobre cada índice, será feito
-# logo em seguida o desempacotamento a cada iteração, gerando uma tupla
-# a cada iteração:
+# desempacotamento onde fica subentendido para o interpretador que,
+# no mesmo momento em que o iterador iterar sobre cada índice e gerar 
+# uma tupla a cada iteração, será feito logo em seguida o desempacotamento 
+# dessa mesma tupla e isso acontece a cada iteração:
 print('\nDesempacotamento com enumerate mais simplificado: ')
-for indice_da_tupla, valor_do_indice_da_lista in enumerate(lista):
-    print(indice_da_tupla, valor_do_indice_da_lista)
+for indice_da_lista, valor_do_indice_da_lista in enumerate(lista):
+    print(indice_da_lista, valor_do_indice_da_lista)
