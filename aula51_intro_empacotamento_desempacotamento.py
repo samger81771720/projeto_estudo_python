@@ -7,7 +7,7 @@
 lista_estados = ['Rio de Janeiro','Santa Catarina','São Paulo']
 
 # "Desempacotar" - Extrair cada valor, criando variáveis 
-# independentas para armazená-las:
+# independentes para armazená-las:
 estado1, estado2, estado3 = lista_estados
 
 # Observe que para cada índice 
@@ -20,8 +20,8 @@ print(estado3)
 print('\n')
 
 
-# Pode ser feito tbm dessa forma:
-cidade1, cidade2, cidade3 = ['Curitiba', 'Porto Alegre', 'João Pessoa']
+# Pode ser feito tbm dessa forma suprimindo os colchetes[]:
+cidade1, cidade2, cidade3 = 'Curitiba', 'Porto Alegre', 'João Pessoa'
 
 print(cidade1)
 print(cidade2)
@@ -33,7 +33,7 @@ print('\n')
 # "jogador1":
 jogador1, *resto_jogadores = ['Pelé', 'Garrincha','Maradona']
 # Essa "variável de resto" irá armazenar uma "outra lista", composta
-# pelos valores restantes, ou seja será uma outra variável a ser
+# pelos valores restantes, ou seja, será uma outra variável a ser
 # criada para armazenar uma outra lista.
 
 print(jogador1)
@@ -46,6 +46,7 @@ print('\n')
 # de "_" para evidenciar isso no código:
 cerveja1, *_ = ['Brahma', 'Antartica','Skol']
 print(cerveja1)
+# Aqui foi impresso, mas não havia necessidade, devido a declaração "_"
 print(_)
 print('\n')
 

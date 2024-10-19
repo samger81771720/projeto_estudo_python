@@ -1,8 +1,9 @@
+
 lista = ['A', 'B', 'C']
 
-_, _, i, *_ = ('A', 'B', 'C', 'D')
-
-print(i, _)
+iterador = enumerate(lista)
 
 
-
+print(next(iterador))  # Saída: (0, 'A')
+print(next(iterador))  # Saída: (1, 'B')
+print(next(iterador)) 
