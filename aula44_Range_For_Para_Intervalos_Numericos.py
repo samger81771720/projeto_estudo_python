@@ -8,8 +8,8 @@
 
 # O primeiro índice é sempre "0", ou seja, se um intervalo de 
 # valores compreender entre 0 e 7, ex.: "intervalo = range(0, 7)" 
-# o primeiro índice será "0"(e seu respectivo valor será "1"),
-# o último índice será "6" cujo respectivo valor será "6" e 
+# o primeiro índice será "0",
+# o último índice será "6" e 
 # o valor da variável "step" será 1"
 
 # "Para encontrar o "número do índice" de "stop" 

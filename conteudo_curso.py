@@ -12,5 +12,6 @@
  Formatação de strings
  Formatacao Strings Método Format
  Função input
- Estrututas de controle de fluxo: If Else
+ Estrututas de controle de fluxo: if elif else
+ Debugger
 '''
