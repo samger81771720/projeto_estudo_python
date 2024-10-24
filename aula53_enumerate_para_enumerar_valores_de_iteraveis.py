@@ -135,3 +135,5 @@ for valores_da_tupla_gerada in enumerate(lista):
 print('\nDesempacotamento com enumerate mais simplificado: ')
 for indice_da_lista, valor_do_indice_da_lista in enumerate(lista):
     print(indice_da_lista, valor_do_indice_da_lista)
+
+

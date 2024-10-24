@@ -14,4 +14,8 @@
  Função input
  Estrututas de controle de fluxo: if elif else
  Debugger
+ Operadores de Comparação
+ Shell Interativo
+ Operadores Lógicos
+ 
 '''
