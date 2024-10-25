@@ -1,18 +1,26 @@
 """
 
-split, strip e join com list e str
+******************************************************************
 
-split - O método split() divide uma string em uma 
+---->  "split" e "strip" são utilizados apenas com iteráveis, ou seja,
+listas(que contenham strings) e strings. (não incluem tuplas) 
+
+---->  "join" é também utilizado apenas com iteráveis que 
+contenham strings, e isso inclui as tuplas.
+
+******************************************************************
+
+"split()" - O método split() divide uma string e retorna uma 
 "lista" de substrings com base em um delimitador 
 especificado. "Por padrão, o delimitador é o espaço". 
 
 
-strip( ) - O método strip() remove espaços em branco 
-(ou caracteres especificados) do início e do fim de 
-uma string. Útil para limpar entradas de usuário.
+"strip( )" - O método strip() retorna uma tupla com 
+os espaços em branco removidos (ou caracteres especificados) 
+do início e do fim de uma string. Útil para limpar entradas de usuário.
 
-join - O método join() concatena elementos 
-usando um delimitador específico. 
+"join()" - O método join() concatena elementos 
+usando um delimitador específico para isso. 
 
 """
 
@@ -52,7 +60,7 @@ print(lista_de_frases3)
 
 print('\n')
 for i, frase in enumerate(lista_de_frases3):
-    print('Sem espaços a direita:')
+    print('"Lista de frases3" sem espaços a direita:')
     print(lista_de_frases3[i].rstrip())
 
 print('\n"Lista de frases3" com espaços no início e no fim:')
@@ -80,12 +88,12 @@ for i, frase in enumerate(lista_de_frases3):
 
 print('\n"Lista de frases3" sem espaços no início e no fim:')
 print(lista_de_frases3)
-
-
-
 print('\n')
+
+
+
 # "PRÁTICA RECOMENDÁVEL"
-# Criando uma nova lista:3
+# Criando uma nova lista:
 
 lista_de_frases4 = list()
 # ou
@@ -107,9 +115,9 @@ print('\nAplicando o método join() para concatenar os elementos de uma string u
 print(letras)
 
 
-frase_concatenada = '-'.join(lista_de_frases4)
+listas_concatenadas = '-'.join(lista_de_frases4)
 print('\nAplicando o método join() para concatenar os elementos de numa lista usando também o delimitador "-":')
-print(frase_concatenada)
+print(listas_concatenadas)
 
 
 print('\n')
