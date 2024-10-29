@@ -22,11 +22,14 @@ print('\n')
 
 # Pode ser feito tbm dessa forma suprimindo os colchetes[]:
 cidade1, cidade2, cidade3 = 'Curitiba', 'Porto Alegre', 'João Pessoa'
-
+print('Primeiro exemplo de desempacotamento de cidades:\n')
 print(cidade1)
 print(cidade2)
 print(cidade3)
 print('\n')
+# ou
+print('\nSegundo exemplo de desempacotamento de cidades:\n')
+print(cidade1,cidade2,cidade3)
 
 # Criando uma variável de resto "resto_jogadores"
 # para desempacotar apenas um valor para a variável
@@ -36,6 +39,7 @@ jogador1, *resto_jogadores = ['Pelé', 'Garrincha','Maradona']
 # pelos valores restantes, ou seja, será uma outra variável a ser
 # criada para armazenar uma outra lista.
 
+print('\n')
 print(jogador1)
 print(resto_jogadores)
 print('\n')
@@ -52,9 +56,32 @@ print('\n')
 
 
 # Utilizando o símbolo "_" para pular índices
-_, _, cantor_segundo_indice, *_ = ['Reginaldo Rossi', 'Fábio Junior', 'Ronnie Von', 'Roberto Carlos', 'Tom Jobim', 'Caetano Veloso']
+_, _, cantor_segundo_indice, *_ = [
+    'Reginaldo Rossi',
+    'Fábio Junior',
+    'Ronnie Von',
+    'Roberto Carlos',
+    'Tom Jobim',
+    'Caetano Veloso'
+]
 print(cantor_segundo_indice)
 print('\n')
+# Observe que aqui os outros restanrtes
+# não foram impressos, devido cada declaração "_"
+
+# Pegando o primeiro e o último índice
+primeiro_indice, *_, ultimo_indice  = [
+    'Reginaldo Rossi',
+    'Fábio Junior',
+    'Ronnie Von',
+    'Roberto Carlos',
+    'Tom Jobim',
+    'Caetano Veloso'
+]
+print(ultimo_indice)
+print('\n')
+# Observe como o uso do '*_' é versátil 
+# e pode ser usado de diversar maneiras
 
 
 # Variável de resto vazia pois não há mais índices 

@@ -1,7 +1,7 @@
 #           "RENOMEAR TODOS OS ARQUIVOS CORRETAMENTE"
 '''
  Docstring
- Função print()
+ Função print()e os parâmtros sep e end
  Tipo string
  Tipo int e float
  Tipo boolean
@@ -17,5 +17,9 @@
  Operadores de Comparação
  Shell Interativo
  Operadores Lógicos
- 
+ Interpolação De Strings Com Símbolo Percentual
+ Fatiamento de Strings
+ Funcao len
 '''
+
+

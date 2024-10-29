@@ -1,17 +1,3 @@
-lista1 = list('123456789')
-lista2 = [10,11,12,13,14,15,16,17,18,19,20]
+lista = [1,2,3,4,5,6,7,8,9,10]
 
-tupla1 = ('A', 'B', 'C')
-tupla2 = ('D', 'E', 'F')
-
-print('\n')
-
-
-
-split = '*'.join(tupla1)
-
-print(split)
-
-
-print('\n')
-
+print(*lista)
