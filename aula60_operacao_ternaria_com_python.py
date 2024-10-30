@@ -35,6 +35,9 @@ print(f'\n{novo_digito = }')
 # pois não se trata de uma boa prárica efetuar 
 # muitos aninhamentos:
 print('Valor' if False else '\nOutro Valor' if False else '\nFim')
+print('Valor' if 3 > 5 else '\nOutro Valor' if 1 == 10 else '\nFim')
+# IMPORTANTE ---> "Qualquer condição só é válida quando é verdadeira(True)"
+
 
 print('\n')
 
