@@ -1,4 +1,9 @@
 """
+
+SITE PARA GERAR CPF:
+https://www.4devs.com.br/gerador_de_cpf
+
+
 Calculo do primeiro dígito do CPF
 CPF: 746.824.890-70
 Colete a soma dos 9 primeiros dígitos do CPF
@@ -27,49 +32,41 @@ O primeiro dígito do CPF é 7
 """
 import os
 cpf_invalido = True
-lista_manipulacao_numeros = []
 NUMERO_DIGITOS_CPF = 11
 NUMERO_PARTE_COMPOSICAO_DIVISOR = 10
 NUMERO_LIMITE_RESTO_DIVISAO = 9
-NUMERO_EXCEDENTE_RESTO_DIVISAO = 0
-contador_progressivo = 0
+NUMERO_PARA_EXCEDENTE = 0
+POSICAO_NONO_DIGITO_CPF = 9
+indice_lista = 0
 contador_regressivo = 10
 somatorio_resultados = 0
-str_nove_primeiros_digitos_cpf = ''
 while cpf_invalido:
     try:
         cpf_str = input('\nDigite os números do cpf:')
         cpf_str = cpf_str.replace('.','').replace('-','')
         cpf_int = int(cpf_str)
-        if len(cpf_str) != 11:
+        if len(cpf_str) != NUMERO_DIGITOS_CPF:
             os.system('cls')
-            print('\nVocê não digitou exatamente 9 números.')
+            print('\nVocê não digitou exatamente 11 números.')
             continue
         cpf_invalido = False
-        nove_primeiros_digitos_cpf = cpf_str[:9]
     except ValueError:
         os.system('cls')
         print('\nO cpf precisa ser composto apenas por números.')
         continue
-for digito in nove_primeiros_digitos_cpf:
-    lista_manipulacao_numeros.append(int(digito) * contador_regressivo)
-    somatorio_resultados += lista_manipulacao_numeros[contador_progressivo]
+for digito in cpf_str[:POSICAO_NONO_DIGITO_CPF]:
+    somatorio_resultados += int(digito) * contador_regressivo
     contador_regressivo -= 1
-    contador_progressivo += 1
-composicao_do_divisor = somatorio_resultados * NUMERO_PARTE_COMPOSICAO_DIVISOR
-resto_divisao = composicao_do_divisor % NUMERO_DIGITOS_CPF
-penultimo_digito_cpf = resto_divisao if (resto_divisao <= NUMERO_LIMITE_RESTO_DIVISAO) else NUMERO_EXCEDENTE_RESTO_DIVISAO
+    indice_lista += 1
+divisor = somatorio_resultados * NUMERO_PARTE_COMPOSICAO_DIVISOR
+resto_divisao = divisor % NUMERO_DIGITOS_CPF
+penultimo_digito_cpf = resto_divisao if (resto_divisao <= NUMERO_LIMITE_RESTO_DIVISAO) else NUMERO_PARA_EXCEDENTE
 
 
 
-
-
-
-
-print(lista_manipulacao_numeros)
 print(somatorio_resultados)
-print(composicao_do_divisor)
-print(nove_primeiros_digitos_cpf)
+print(divisor)
+print(f'{cpf_str[:POSICAO_NONO_DIGITO_CPF]=}')
 print(resto_divisao)
 print('\n')
 print(penultimo_digito_cpf)

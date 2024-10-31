@@ -9,6 +9,14 @@ Fatiamento [i:f:p] [::]
 
 função "len": retorna a qtd de caracteres da str
 
+IMPORTANTE:
+Quando o fatiamento é feito num "intervalo de índices específicos", 
+exemplo: "[2:6]", ou o quando o fatiamento é feito apenas 
+de forma inversa, exemplo: "[:6]", "último índice será 
+sempre o valor que representado menos 1", nos exemplos dados 
+o valor real dos índices seria "5".
+
+
 """
 
 variavel = 'Olá mundo'
@@ -38,7 +46,6 @@ print(variavel[4:7])
     1 a mais para chegar ao índice desejado, ou seja, no exemplo acima
     deveria ser "print(variavel[4:8])".
 '''
-
 
 
 print(variavel[:5])
