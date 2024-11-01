@@ -21,10 +21,16 @@ while cpf_invalido:
             os.system('cls')
             print('\nVocê não digitou exatamente 11 números.')
             continue
+        if cpf_str[:9] == cpf_str[0] * 9:
+            os.system('cls')
+            print('Os 9 primeiros números do CPF não podem ser idênticos. Tente novamente.')
+            continue
         cpf_invalido = False
     except ValueError:
         os.system('cls')
-        print('\nO cpf precisa ser composto apenas por números.')
+        print(
+            '\nO cpf precisa ser composto apenas por números, ' \
+            ' ou, "opcionalmente" separá-lo com pontos e travessão.')
         continue
 for digito in cpf_str[:POSICAO_NONO_DIGITO_CPF]:
     somatorio_resultados1 += int(digito) * contador_regressivo1
@@ -46,10 +52,11 @@ print(f'{penultimo_digito_cpf}')
 print(f'{ultimo_digito_cpf}')
 if cpf_str == cpf_str[:9] + str(penultimo_digito_cpf) + str(ultimo_digito_cpf):
     os.system('cls')
-    print(f'\nO cpf {cpf_formatado} foi devidamente verificado e está em conformidade com as regras da Receita Federal.\n')
+    print(
+        f'\nO cpf {cpf_formatado} foi devidamente verificado ' \
+            'e está em conformidade com as regras da Receita Federal.\n'
+    )
     # exemplo de cpf válido 74682489070
 else:
     print('CPF inválido, tente novamente.')
     # exemplo de cpf inválido 74682489071
-
-
