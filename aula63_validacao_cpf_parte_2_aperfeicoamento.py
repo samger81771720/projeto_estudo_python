@@ -53,6 +53,7 @@ while cpf_invalido:
     if not cpf_str:
         os.system('cls')
         print('Você não digitou "nada". Portanto o programa será encerrado.')
+        #Usando a função "exit()" do módulo "sys":
         sys.exit('\n"Programa encerrado."\n')
     # Usando a função "sub()" do módulo "re":
     cpf_str = re.sub(r'[^0-9]', '', cpf_str)

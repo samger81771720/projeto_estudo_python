@@ -24,15 +24,13 @@ contador_regressivo1 = 10
 contador_regressivo2 = 11
 somatorio_resultados1 = 0
 somatorio_resultados2 = 0
+cpf_str = ''
+
 
 for i in range(100):
-    cpf_str = ''  # Reinicializar cpf_str dentro do loop principal
-    
+    cpf_str = ''
     for i in range(9):
-        cpf_str += str(random.randint(0, 9))
-
-    somatorio_resultados1 = 0
-    contador_regressivo1 = 10
+        cpf_str += str(random.randint(0,9))
 
     for digito in cpf_str[:POSICAO_NONO_DIGITO_CPF]:
         somatorio_resultados1 += int(digito) * contador_regressivo1
@@ -46,9 +44,6 @@ for i in range(100):
     penultimo_digito_cpf = resto_divisao if (resto_divisao <= NUMERO_LIMITE_RESTO_DIVISAO) else NUMERO_PARA_EXCEDENTE
 
     cpf_str = cpf_str + str(penultimo_digito_cpf)
-
-    somatorio_resultados2 = 0
-    contador_regressivo2 = 11
 
     for digito in cpf_str[:POSICAO_DECIMO_DIGITO_CPF]:
         somatorio_resultados2 += int(digito) * contador_regressivo2
@@ -64,5 +59,6 @@ for i in range(100):
     cpf_formatado = f'{cpf_str[:3]}.{cpf_str[3:6]}.{cpf_str[6:9]}-{penultimo_digito_cpf}{ultimo_digito_cpf}'
     print(
         f'\nO cpf {cpf_formatado} foi devidamente verificado ' \
-        'e está em conformidade com as regras da Receita Federal.\n'
+            'e está em conformidade com as regras da Receita Federal.\n'
     )
+
