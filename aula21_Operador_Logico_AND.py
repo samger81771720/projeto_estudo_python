@@ -1,4 +1,4 @@
-                                    # Operador lógico "and"
+#                            Operador lógico "and"
 
 # and (e) or (ou) not (não)
 
@@ -18,12 +18,12 @@ if entrada == 'S':
     print('Saiu do programa.')
 elif entrada == 'E':
     senha_digitada = input('Digite a senha: ')
-if entrada == 'E' and (senha_digitada == senha_permitida):
-    print('Entrou')
-elif entrada == 'E' and (senha_digitada != senha_permitida):
-    print('A senha digitada é diferente da senha permitida.')
-elif entrada != 'E' and entrada != 'S':
-   print('As únicas opções diponíveis são "E" ou "S". Digite uma das duas opções.')
+    if senha_digitada == senha_permitida:
+        print('Entrou')
+    else:
+        print('A senha digitada é diferente da senha permitida.')
+else:
+    print('As únicas opções diponíveis são "E" ou "S". Digite uma das duas opções.')
 
 
 '''

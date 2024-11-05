@@ -106,7 +106,7 @@ formato4 =  string4.format(letraA = a, letraB = b, numeroNomeado = numero)
 '''
 Também é possível nomear apenas uma parte dos argumentos, 
 porém deverá ser obedecida a ordem da "esquerda para a direita" e
-"todos os parâmetros a direita devrão ser nomeados".
+"todos os parâmetros a direita deverão ser nomeados".
 '''
 string5 = '\n Letra a = {0}(Não nomeado), Letra b = {letraB}(nomeado) e a Letra a = {numeroNomeado:.3f}(nomeado)'
 
