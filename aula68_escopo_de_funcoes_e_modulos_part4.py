@@ -1,4 +1,42 @@
 '''
+            CALL STACK(PILHA DE CHAMADAS)
+
+    A call stack é uma estrutura de dados usada 
+pelo Python (e outras linguagens de programação) 
+para manter o controle das funções que estão sendo 
+chamadas em um determinado momento. Ela funciona 
+como uma "pilha" (ou stack) onde cada chamada de 
+função é "empilhada" (inserida no topo da pilha) 
+quando é chamada, e "desempilhada" (removida) 
+quando a função termina.
+
+Quando uma função é chamada, ela é empilhada 
+na call stack. E, ao terminar, é removida da stack, 
+permitindo que o programa continue a execução de 
+onde parou.
+
+'''
+
+x = 1
+
+def escopo():
+    global x
+    x = 10
+
+    def outra_funcao():
+        global x
+        x = 11
+        y = 2
+        print(x, y)
+
+    outra_funcao()
+    print(x)
+
+print(x)
+escopo()
+print(x)
+
+'''
 Análise da execução do código linha a linha para 
 observar como a call stack seria preenchida:
 
@@ -78,7 +116,7 @@ A call stack está vazia novamente, pois todas as funções terminaram.
 "Resumo da Call Stack Durante a Execução"
 
     A call stack nos ajuda a gerenciar a sequência de chamadas de funções.
-No  código, a call stack organiza a ordem de execução para que outra_
+No seu código, a call stack organiza a ordem de execução para que outra_
 funcao seja executada dentro de escopo e as funções sejam chamadas e finalizadas 
 na sequência correta.
 
