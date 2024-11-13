@@ -5,6 +5,8 @@ INTRODUÇÃO A FUNÇÕES EM PYTHON
 para replicar determinada ação ao longo 
 do seu código."
 
+"Funções podem ou não retornar valores"
+
 ----------------------------------------------------------
 Parâmetro: É uma variável(s) criada(s) na definição da função. 
 É como a função espera receber dados. Por exemplo, em def 

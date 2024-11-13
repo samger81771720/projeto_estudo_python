@@ -19,6 +19,9 @@ print(estado2)
 print(estado3)
 print('\n')
 
+# Outra forma de desempacotar, porém essa 
+# forma somente pode ser usada na impressão:
+print(*lista_estados)
 
 # Pode ser feito tbm dessa forma suprimindo os colchetes[]:
 cidade1, cidade2, cidade3 = 'Curitiba', 'Porto Alegre', 'João Pessoa'
@@ -32,7 +35,7 @@ print('\nSegundo exemplo de desempacotamento de cidades:\n')
 print(cidade1,cidade2,cidade3)
 
 # Criando uma variável de resto "resto_jogadores"
-# para desempacotar apenas um valor para a variável
+# para "empacotar" apenas um valor para a variável
 # "jogador1":
 jogador1, *resto_jogadores = ['Pelé', 'Garrincha','Maradona']
 # Essa "variável de resto" irá armazenar uma "outra lista", composta

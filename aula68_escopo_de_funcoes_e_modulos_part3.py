@@ -3,16 +3,22 @@ Passe o debuger para verificar como as
 variáveis são acessadas e a observar a 
 execução:
 '''
+# Adicione um breakpoint:
+# na linha 24(x = 12) 
+# na linha 28(x = 19)
+# na linha 32(x = 24)
+
 
 x = 1  # Inicialmente, x é uma variável global com valor 1
 
 # Ao definir a função escopo, o Python armazena a função 
 # (incluindo o corpo, com toda a lógica contida nela)como 
-# um objeto na memória:
+# um objeto na memória alocando um espaço na memória para ela:
 def escopo():
     global x  # Declara que x dentro de escopo() é a variável global x
     x = 10  # Atualiza a variável global x para 10
 
+    # Armazenado outra função, alocando um outro espaço na memória para ela:
     def outra_funcao():
         global x  # Declara que x dentro de outra_funcao() é a variável global x
         x = 11  # Atualiza a variável global x para 11

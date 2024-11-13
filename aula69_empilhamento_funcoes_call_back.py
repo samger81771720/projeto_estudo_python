@@ -16,6 +16,16 @@ permitindo que o programa continue a execução de
 onde parou.
 
 '''
+# Adicione um breakpoint:
+# na linha 24(x = 1) 
+# na linha 28(x = 10)
+# na linha 32(x = 11)
+
+# na aba "debuger", após iniciar o mesmo, 
+# clique em "call stack" e observe 
+# as funções sendo empilhadas a medida em que são
+# executadas e sendo desempilhadas a medida
+# que cada uma termina a sua execução.
 
 x = 1
 
