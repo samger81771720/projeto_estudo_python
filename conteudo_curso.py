@@ -15,6 +15,7 @@
  Formatacao Strings Método Format
  Função input
  Estrututas de controle de fluxo: if, elif, else, while, break
+ Comando de controle de loop "continue"
  Debugger
  Operadores de Comparação
  Operadores de Atribuicao
@@ -28,5 +29,6 @@
  Variaveis e Constantes
  Identidade De Valores Na Memória
  Tipos Built-In
-Operadores_De_Atribuicao_Com_Operadores_Aritmeticos
+ Operadores_De_Atribuicao_Com_Operadores_Aritmeticos
+
 '''
