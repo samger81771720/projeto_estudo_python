@@ -6,7 +6,7 @@ Retorno de valores das funções (return)
 """
 
 def soma(x, y):
-    # Emobora aparecça a mensagem "oi" 
+    # Emobora apareça a mensagem "oi" 
     # a função print() é usada para 
     # enviar a saída para a tela 
     # (ou outro dispositivo de saída padrão). 

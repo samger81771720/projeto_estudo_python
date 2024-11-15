@@ -21,13 +21,7 @@ def par_impar(numero):
         return 'Vc não digitou um valor númerico.'
     multiplo_de_dois = numero_verificado % 2 == 0
     if multiplo_de_dois:
-        return f'O número {numero_verificado} é par.' 
+        return f'O número {numero_verificado} é par.'
     return f'O número {numero_verificado} é ímpar.'
 print(par_impar(100))
 print(par_impar('y'))
-
-'''
- if numero_verificado % 2 == 0:
-        return f'O número {numero_verificado} é par.'
-    return f'O número {numero_verificado} é ímpar.'
-'''

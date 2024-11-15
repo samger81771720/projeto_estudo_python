@@ -25,6 +25,7 @@ numeros = 1,2,3
 # para que pudessem ser gerados os argumentos 
 # não nomeados e assim pudessem ser utilizados 
 # no parâmetro da função soma:
+print('Variável que na verdade é uma tupla chamada "numeros" desempacotada:', *numeros)
 outra_soma = soma(*numeros)
 print(outra_soma)
 

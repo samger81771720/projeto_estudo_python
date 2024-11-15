@@ -46,7 +46,7 @@ def saudacao(nome, mensagem = None):
 saudacao("Maria")
 saudacao("João", "Bom dia")
 # Abaixo, os argumentos estão fora de ordem e são nomedados:
-saudacao(mensagem="Hi", nome = 'André')
+saudacao(mensagem = "Hi", nome = 'André')
 
 
 # Uma vez definindo um parâmetro com valor padrão dentro do ()
