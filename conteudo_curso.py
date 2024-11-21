@@ -29,6 +29,12 @@
  Variaveis e Constantes
  Identidade De Valores Na Memória
  Tipos Built-In
- Operadores_De_Atribuicao_Com_Operadores_Aritmeticos
+ Operadores De Atribuicao Com Operadores Aritmeticos
+ Tratamento de exceções com "try/except"
+ Estrutura de repetição "for in"
+ Função range
+ Listas mutáveis
 
+ 
 '''
+# Continuar da aula 51 em diante

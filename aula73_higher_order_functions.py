@@ -1,24 +1,20 @@
 '''
-------------------------------------------------------
+------------------------------------------------------------------
+
         Funções de Primeira Classe (First-Class Functions)
 
-Em Python, funções de primeira classe são funções que 
-são tratadas como objetos comuns, ou seja, elas podem:
+Funções tratadas como valores, podendo ser 
+atribuídas a variáveis, passadas como 
+argumentos ou retornadas.
 
-*** Ser atribuídas a variáveis.
+------------------------------------------------------------------
 
-*** Ser passadas como argumentos para outras funções.
-
-*** Ser retornadas por outras funções.
-------------------------------------------------------
         Funções de Ordem Superior (Higher Order Functions)
 
-Funções de ordem superior são funções que:
+Higher-Order Functions: Funções que recebem 
+outras funções como argumento ou as retornam.
 
-*** Podem receber outras funções como argumentos.
-
-*** Podem retornar funções como resultado.
-------------------------------------------------------
+------------------------------------------------------------------
 
 '''
                 # Funções de Primeira Classe (First-Class Functions)
@@ -38,17 +34,18 @@ variavel_msg2 = mensagem2
 # um parâmetro para "variavel_msg2"
 outra_variavel_msg2 = variavel_msg2('texto da função mensagem2')
 print(outra_variavel_msg2)
+# ou:
 print(variavel_msg2('texto da função mensagem2'))
 
 
 # outro exemplo:
 def somar(x, y):
     return x + y
-# Atribuindo uma função a uma variável
+# Atribuindo uma função de primeira classe a uma variável
 minha_funcao = somar
-# Passando a função como argumento
 def executar_funcao(func, a, b):
     return func(a, b)
+# Passando a função como argumento
 resultado = executar_funcao(minha_funcao, 10, 5)
 print(resultado)  # Saída: 15
 
@@ -62,7 +59,7 @@ print(resultado)  # Saída: 15
 
 def mensagem3(texto):
     return texto
-# PASSANDO UMA FUNÇÃO COMO UM ARGUMENTO:
+# RECEBENDO UMA FUNÇÃO COMO UM ARGUMENTO:
 def executa_funcao(funcao, texto):
     return funcao(texto)
 variavel_executa_funcao = executa_funcao(mensagem3,'texto da função mensagem3')
@@ -94,7 +91,26 @@ def aplicar_operacao(func, valor):
 def dobro(x):
     return x * 2
 resultado = aplicar_operacao(dobro, 5)
-print(resultado)  # Saída: 10
+print(resultado)  
+
+
+# outro exemplo
+def desconto_10(preco):
+    return preco * 0.9
+
+def imposto_5(preco_com_desc):
+    return preco_com_desc * 1.05
+
+def calcular_precos(func_desconto, func_imposto,*precos_base):
+    lista_precos_finais = []
+    for preco in precos_base:
+        preco_com_desconto = func_desconto(preco)
+        preco_final = func_imposto(preco_com_desconto)
+        lista_precos_finais.append(preco_final)
+    return lista_precos_finais
+
+precos = calcular_precos(desconto_10, imposto_5, 10, 30, 50)   
+print(f'Lista com os preços finais: {precos}')
 
 
 

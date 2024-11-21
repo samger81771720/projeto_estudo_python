@@ -1,2 +1,1 @@
-def calcular_salario():
-    ...
+  
