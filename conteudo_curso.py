@@ -34,7 +34,10 @@
  Estrutura de repetição "for in"
  Função range
  Listas mutáveis
-
- 
+ Empacotamento e Desempacotamento
+ Tuplas
+ Função enumerate
+ Função split
+ Expressão ternária 
 '''
-# Continuar da aula 51 em diante
+# Continuar da aula 55 em diante
