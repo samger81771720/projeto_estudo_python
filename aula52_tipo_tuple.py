@@ -53,3 +53,20 @@ print(f'Aqui a variável {lista_nomes2 = } se tornou uma tupla, pois foi convert
 # Assim como podem se transformar novamente numa lista.
 lista_nomes2 = list(lista_nomes2)
 print(f'Aqui a variável {lista_nomes2 = } se tornou novamente uma lista, pois foi convertida pela função "list()".')
+
+# Uma simples tupla:
+tupla = ()
+print(tupla)
+
+# Uma tupla que contém outra tupla 
+# dentro dela(tupla de vírgula final):
+tupla_com_tupla = (),
+print(tupla_com_tupla)
+
+# Uma tupla que contém outras tuplas dentro dela:
+tupla_com_tuplas = (),()
+print(tupla_com_tuplas)
+
+# Uma tupla que contém outras tuplas dentro dela:
+tupla_com_tuplas = (),()
+print(tupla_com_tuplas)

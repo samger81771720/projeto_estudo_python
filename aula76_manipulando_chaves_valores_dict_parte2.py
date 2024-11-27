@@ -56,27 +56,3 @@ pessoa1[chave] = 'casado'
 print('\n',pessoa1)
 # ou:
 print('\n',pessoa1[chave])
-
-
-# Acessando um índice com o método "get"
-# Por padrão retorna None caso o índice 
-# não exista:
-if pessoa1.get('conta bancaria'):
-    print(pessoa1['conta bancaria'])
-else:
-    print(pessoa1.get('conta bancaria'))
-
-# Também é possível passar um outro 
-# valor padrão, caso não exista o índice:
-if pessoa1.get('conta bancaria'):
-    print(pessoa1['conta bancaria'])
-else:
-    print(pessoa1.get('conta bancaria', 'Índice "conta bancaria" não existe.'))
-
-# Forma mais usual de tratar a condicional acima:
-if pessoa1.get('conta bancaria') is None:
-    print(pessoa1.get('conta bancaria', '1 - Índice "conta bancaria" não existe.'))
-    # Ou:
-    print('2 - A chave "conta bancaria" não existe.')
-else:
-    print(pessoa1['conta bancaria'])

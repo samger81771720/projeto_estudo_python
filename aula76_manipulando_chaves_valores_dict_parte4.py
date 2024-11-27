@@ -6,16 +6,14 @@
 # "list" e "dict"(ambos mutáveis) possuem o método "copy"
 
 # copy - retorna uma cópia rasa (shallow copy)
-# get - obtém uma chave
-# pop - Apaga um item com a chave especificada (del)
-# popitem - Apaga o último item adicionado
-# update - Atualiza um dicionário com outro
 
 
 
 
-# Para fazer uma cópia total(deep copy) de um dado 
-# mutável utiliza-se um módulo chamado "copy":
+
+# Para fazer uma "cópia total ou profunda(deep copy)" de um dado 
+# mutável" utiliza-se uma função extraída do 
+# módulo chamado "copy":
 import copy
 
 
@@ -44,7 +42,7 @@ print(imovel1)
 print(imovel2)
 
 imovel2['endereco'] = 'Av. Lúcio Costa, nº 300.'
-# Após fazer a alteração
+# Após fazer a alteração:
 print('\n 2 -->')
 print(imovel1)
 print(imovel2)
@@ -59,7 +57,7 @@ print('\n 3 -->')
 
 # Na linha abaixo, o método copy é método 
 # de instância específico dos dicionários:
-imovel2 = imovel1.copy() 
+imovel2 = imovel1.copy()
 
 # Nessa outra linha abaixo está sendo usada 
 # "a função copy()" do "módulo copy"
@@ -70,8 +68,8 @@ imovel2 = copy.copy(imovel1)
 imovel2['endereco'] =  'Av. Presidente Vargas, nº 1999.'
 print(imovel1)
 print(imovel2)
-# Faz uma cópia rasa porque copia apenas os dados 
-# "imutáveis". A variável "lista" é um dado "mutável", 
+# Faz uma cópia rasa porque copia apenas os dados
+# "imutáveis". A variável "lista" é um dado "mutável",
 # logo "não será copiada".
 
 
@@ -94,7 +92,7 @@ print(imovel3)
 
 
 # Usando o método "deepcopy()"
-print('\n 4 -->')
+print('\n 5 -->')
 # O método "deepcopy()" tbm pertence 
 # ao módulo "copy" e cria uma cópia 
 # independente de um objeto, copiando 
@@ -105,9 +103,10 @@ imovel4 = copy.deepcopy(imovel1)
 print(imovel1)
 print(imovel4)
 
-print('\n 5 -->')
+print('\n 6 -->')
 imovel4['lista'][2] = 1111111111111
 print(imovel1)
 print(imovel4)
 
 print('\n')
+
