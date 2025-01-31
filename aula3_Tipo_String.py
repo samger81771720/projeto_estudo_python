@@ -1,6 +1,6 @@
 """ DOC STRING(Aspas usadas para fazer comentários como o que está sendo feito abaixo)
 
-Python = Limguagem de Programação
+Python = Linguagem de Programação
 
 Existem os seguintes tipos de tipagem para as linguagens de programação:
 

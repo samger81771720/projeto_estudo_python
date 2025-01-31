@@ -108,7 +108,7 @@ Também é possível nomear apenas uma parte dos argumentos,
 porém deverá ser obedecida a ordem da "esquerda para a direita" e
 "todos os parâmetros a direita deverão ser nomeados".
 '''
-string5 = '\n Letra a = {0}(Não nomeado), Letra b = {letraB}(nomeado) e a Letra a = {numeroNomeado:.3f}(nomeado)'
+string5 = '\n Letra a = {0}(Não nomeado), Número = {numeroNomeado:.3f}(nomeado) e Letra b = {letraB}(nomeado)'
 
 formato5 =  string5.format(a, letraB = b, numeroNomeado = numero)
 
